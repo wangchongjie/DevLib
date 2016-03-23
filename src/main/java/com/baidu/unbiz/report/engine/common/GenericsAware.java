@@ -33,7 +33,7 @@ public abstract class GenericsAware<T> {
         if (clazz == null) {
             throw new RuntimeException("entity clazz is null");
         }
-        return ClassUtils.getCachedFieldFromClass(field, clazz);
+        return ClassUtils.getFieldFromClass(field, clazz);
     }
 
     public void setEntityClass(Class<T> entityClass) {
