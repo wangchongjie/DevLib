@@ -39,9 +39,9 @@ public class JoinerUtilsTest {
         ViewItem item1 = new ViewItem();
         item1.setId(1).setName("name1");
         ViewItem item2 = new ViewItem();
-        item1.setId(2).setName("name2");
+        item2.setId(2).setName("name2");
         ViewItem item3 = new ViewItem();
-        item1.setId(3).setName("name3");
+        item3.setId(3).setName("name3");
         list1.add(item1);
         list1.add(item2);
         list1.add(item3);
@@ -51,11 +51,11 @@ public class JoinerUtilsTest {
     private List<ViewItem> mockList2() {
         List<ViewItem> list1 = new ArrayList<ViewItem>();
         ViewItem item1 = new ViewItem();
-        item1.setId(1).setCpc(1).setCpm(1).setCpc(1);
+        item1.setId(1).setCpc(1).setCpm(1).setCtr(1);
         ViewItem item2 = new ViewItem();
-        item1.setId(2).setCpc(2).setCpm(2).setCpc(2);
+        item2.setId(2).setCpc(2).setCpm(2).setCtr(2);
         ViewItem item3 = new ViewItem();
-        item1.setId(3).setCpc(3).setCpm(3).setCpc(3);
+        item3.setId(3).setCpc(3).setCpm(3).setCtr(3);
         list1.add(item1);
         list1.add(item2);
         list1.add(item3);
