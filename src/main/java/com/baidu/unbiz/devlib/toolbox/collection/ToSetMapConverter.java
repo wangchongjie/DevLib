@@ -17,21 +17,21 @@ import org.apache.commons.logging.LogFactory;
  * @fileName ToMapConverter.java
  * @dateTime 2015-3-9 下午1:10:39
  */
-public abstract class ToSetMapConverter<T, N, M> {
+public abstract class ToSetMapConverter<ITEM, KEY, VALUE> {
 
     private final static Log LOG = LogFactory.getLog(ToSetMapConverter.class);
 
-    public Map<N, Set<M>> convert(final List<T> objs) {
-        Map<N, Set<M>> map = new HashMap<N, Set<M>>();
+    public Map<KEY, Set<VALUE>> convert(final List<ITEM> objs) {
+        Map<KEY, Set<VALUE>> map = new HashMap<KEY, Set<VALUE>>();
         if (CollectionUtils.isEmpty(objs)) {
             return map;
         }
-        for (T obj : objs) {
-            N key = this.getMapKey(obj);
+        for (ITEM obj : objs) {
+            KEY key = this.getMapKey(obj);
             if (key != null) {
-                Set<M> set = map.get(key);
+                Set<VALUE> set = map.get(key);
                 if (set == null) {
-                    set = new HashSet<M>();
+                    set = new HashSet<VALUE>();
                     map.put(key, set);
                 }
                 set.add(this.getSetValue(obj));
@@ -42,7 +42,7 @@ public abstract class ToSetMapConverter<T, N, M> {
         return map;
     }
 
-    public abstract N getMapKey(T obj);
+    public abstract KEY getMapKey(ITEM obj);
 
-    public abstract M getSetValue(T obj);
+    public abstract VALUE getSetValue(ITEM obj);
 }

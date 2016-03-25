@@ -15,17 +15,17 @@ import org.apache.commons.logging.LogFactory;
  * @fileName ToMapConverter.java
  * @dateTime 2015-3-9 下午1:10:39
  */
-public abstract class ToMapConverter<N, T> {
+public abstract class ToMapConverter<KEY, ITEM> {
 
     private final static Log LOG = LogFactory.getLog(ToMapConverter.class);
 
-    public Map<N, T> convert(final List<T> objs) {
-        Map<N, T> map = new HashMap<N, T>();
+    public Map<KEY, ITEM> convert(final List<ITEM> objs) {
+        Map<KEY, ITEM> map = new HashMap<KEY, ITEM>();
         if (CollectionUtils.isEmpty(objs)) {
             return map;
         }
-        for (T obj : objs) {
-            N key = this.getMapKey(obj);
+        for (ITEM obj : objs) {
+            KEY key = this.getMapKey(obj);
             if (key != null) {
                 map.put(key, obj);
             } else {
@@ -35,6 +35,6 @@ public abstract class ToMapConverter<N, T> {
         return map;
     }
 
-    public abstract N getMapKey(T obj);
+    public abstract KEY getMapKey(ITEM obj);
 
 }

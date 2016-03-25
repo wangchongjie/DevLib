@@ -15,17 +15,17 @@ import org.apache.commons.logging.LogFactory;
  * @fileName ToMapConverter.java
  * @dateTime 2015-3-9 下午1:10:39
  */
-public abstract class ToKvMapConverter<T, K, V> {
+public abstract class ToKvMapConverter<ITEM, KEY, VALUE> {
 
     private final static Log LOG = LogFactory.getLog(ToKvMapConverter.class);
 
-    public Map<K, V> convert(final List<T> objs) {
-        Map<K, V> map = new HashMap<K, V>();
+    public Map<KEY, VALUE> convert(final List<ITEM> objs) {
+        Map<KEY, VALUE> map = new HashMap<KEY, VALUE>();
         if (CollectionUtils.isEmpty(objs)) {
             return map;
         }
-        for (T obj : objs) {
-            K key = this.getMapKey(obj);
+        for (ITEM obj : objs) {
+            KEY key = this.getMapKey(obj);
             if (key != null) {
                 map.put(key, this.getMapValue(obj));
             } else {
@@ -35,8 +35,8 @@ public abstract class ToKvMapConverter<T, K, V> {
         return map;
     }
 
-    public abstract K getMapKey(T obj);
+    public abstract KEY getMapKey(ITEM obj);
 
-    public abstract V getMapValue(T obj);
+    public abstract VALUE getMapValue(ITEM obj);
 
 }
