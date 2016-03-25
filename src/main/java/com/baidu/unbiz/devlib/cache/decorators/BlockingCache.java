@@ -7,7 +7,7 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantLock;
 
 import com.baidu.unbiz.devlib.cache.Cache;
-import com.baidu.unbiz.devlib.exception.CacheException;
+import com.baidu.unbiz.devlib.cache.exception.CacheException;
 
 /**
  * Simple blocking decorator

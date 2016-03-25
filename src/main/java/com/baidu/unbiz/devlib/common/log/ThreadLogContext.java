@@ -1,4 +1,4 @@
-package com.baidu.unbiz.devlib.log;
+package com.baidu.unbiz.devlib.common.log;
 
 import java.io.Serializable;
 import java.util.HashMap;

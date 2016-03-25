@@ -4,7 +4,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
-import com.baidu.unbiz.devlib.util.ClassUtils;
+import com.baidu.unbiz.devlib.utils.ClassUtils;
 
 
 /**

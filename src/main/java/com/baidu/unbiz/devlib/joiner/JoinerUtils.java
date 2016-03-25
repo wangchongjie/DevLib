@@ -11,7 +11,7 @@ import java.util.Set;
 import org.apache.commons.collections.CollectionUtils;
 import org.slf4j.Logger;
 
-import com.baidu.unbiz.devlib.log.AopLogFactory;
+import com.baidu.unbiz.devlib.common.log.AopLogFactory;
 
 /**
  * Created by wangchongjie on 16/3/23.

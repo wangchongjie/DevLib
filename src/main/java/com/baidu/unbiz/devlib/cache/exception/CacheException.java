@@ -1,4 +1,4 @@
-package com.baidu.unbiz.devlib.exception;
+package com.baidu.unbiz.devlib.cache.exception;
 
 /**
  * 缓存类异常

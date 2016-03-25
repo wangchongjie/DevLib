@@ -1,4 +1,4 @@
-package com.baidu.unbiz.devlib.exception;
+package com.baidu.unbiz.devlib.common.exception;
 
 public class DevLibException extends RuntimeException {
 

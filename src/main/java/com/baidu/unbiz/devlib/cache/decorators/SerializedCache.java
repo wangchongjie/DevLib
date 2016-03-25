@@ -10,7 +10,7 @@ import java.io.ObjectStreamClass;
 import java.io.Serializable;
 import java.util.concurrent.locks.ReadWriteLock;
 
-import com.baidu.unbiz.devlib.exception.CacheException;
+import com.baidu.unbiz.devlib.cache.exception.CacheException;
 import com.baidu.unbiz.devlib.cache.Cache;
 
 public class SerializedCache implements Cache {
