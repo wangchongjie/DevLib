@@ -20,13 +20,13 @@ import com.baidu.unbiz.devlib.common.GenericsAware;
  * @fileName IdCollector.java
  * @dateTime 2014-11-21 下午7:57:08
  */
-public abstract class IdCollector<T> extends GenericsAware<T> {
+public abstract class IdCollector<ITEM> extends GenericsAware<ITEM> {
 
     private final static Log LOG = LogFactory.getLog(IdCollector.class);
 
     @SuppressWarnings("unchecked")
-    public <N> Set<N> collectIds(Collection<T> itemList, String fieldName) {
-        Set<N> result = new HashSet<N>();
+    public <ID> Set<ID> collectIds(Collection<ITEM> itemList, String fieldName) {
+        Set<ID> result = new HashSet<ID>();
         if (CollectionUtils.isEmpty(itemList)) {
             return result;
         }
@@ -37,9 +37,9 @@ public abstract class IdCollector<T> extends GenericsAware<T> {
         if (!field.isAccessible()) {
             field.setAccessible(true);
         }
-        for (T item : itemList) {
+        for (ITEM item : itemList) {
             try {
-                N target = (N) field.get(item);
+                ID target = (ID) field.get(item);
                 if (target != null) {
                     result.add(target);
                 }
@@ -53,7 +53,7 @@ public abstract class IdCollector<T> extends GenericsAware<T> {
     }
 
     @SuppressWarnings("unchecked")
-    public <N> boolean containIds(List<T> itemList, String fieldName, Collection<N> idSet) {
+    public <ID> boolean containIds(List<ITEM> itemList, String fieldName, Collection<ID> idSet) {
         if (CollectionUtils.isEmpty(itemList)) {
             return false;
         }
@@ -64,9 +64,9 @@ public abstract class IdCollector<T> extends GenericsAware<T> {
         if (!field.isAccessible()) {
             field.setAccessible(true);
         }
-        for (T item : itemList) {
+        for (ITEM item : itemList) {
             try {
-                N target = (N) field.get(item);
+                ID target = (ID) field.get(item);
                 if (target != null && idSet.contains(target)) {
                     return true;
                 }
@@ -80,7 +80,7 @@ public abstract class IdCollector<T> extends GenericsAware<T> {
     }
 
     @SuppressWarnings("unchecked")
-    public <N> boolean removeItemByIds(List<T> itemList, String fieldName, Collection<N> idSet) {
+    public <N> boolean removeItemByIds(List<ITEM> itemList, String fieldName, Collection<N> idSet) {
         if (CollectionUtils.isEmpty(itemList)) {
             return false;
         }
@@ -92,11 +92,11 @@ public abstract class IdCollector<T> extends GenericsAware<T> {
             field.setAccessible(true);
         }
 
-        Iterator<T> iter = itemList.iterator();
+        Iterator<ITEM> iter = itemList.iterator();
 
         boolean containIds = false;
         while (iter.hasNext()) {
-            T item = iter.next();
+            ITEM item = iter.next();
             try {
                 N target = (N) field.get(item);
                 if (target != null && idSet.contains(target)) {
