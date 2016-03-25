@@ -10,7 +10,7 @@ import com.baidu.unbiz.devlib.cache.Cache;
 import com.baidu.unbiz.devlib.cache.decorators.SynchronizedCache;
 import com.baidu.unbiz.devlib.cache.decorators.LoggingCache;
 import com.baidu.unbiz.devlib.cache.decorators.LruCache;
-import com.baidu.unbiz.devlib.impl.PerpetualCache;
+import com.baidu.unbiz.devlib.cache.impl.PerpetualCache;
 import com.baidu.unbiz.devlib.toolbox.time.TimeRecoder;
 
 public class CacheTest {
