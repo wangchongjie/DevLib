@@ -1,4 +1,4 @@
-package com.baidu.unbiz.devlib.utils;
+package com.baidu.unbiz.devlib.clazz;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.Callable;
 
-import com.baidu.unbiz.devlib.common.MethodPair;
+import com.baidu.unbiz.devlib.common.bo.MethodPair;
 import com.baidu.unbiz.devlib.cache.AtomicComputeCache;
 
 /**

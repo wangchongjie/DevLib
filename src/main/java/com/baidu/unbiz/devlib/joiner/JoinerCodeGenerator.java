@@ -17,12 +17,12 @@ import javassist.NotFoundException;
 
 import org.slf4j.Logger;
 
-import com.baidu.unbiz.devlib.common.MethodPair;
+import com.baidu.unbiz.devlib.common.bo.MethodPair;
 import com.baidu.unbiz.devlib.common.exception.DevLibException;
 import com.baidu.unbiz.devlib.common.log.AopLogFactory;
 import com.baidu.unbiz.devlib.cache.AtomicComputeCache;
-import com.baidu.unbiz.devlib.utils.ClassUtils;
-import com.baidu.unbiz.devlib.utils.Fs64Utils;
+import com.baidu.unbiz.devlib.clazz.ClassUtils;
+import com.baidu.unbiz.devlib.crypto.Fs64Utils;
 
 /**
  * 代码生成类

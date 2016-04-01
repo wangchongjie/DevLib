@@ -1,4 +1,4 @@
-package com.baidu.unbiz.devlib.toolbox.collection;
+package com.baidu.unbiz.devlib.collection;
 
 import java.util.HashMap;
 import java.util.HashSet;

@@ -1,4 +1,4 @@
-package com.baidu.unbiz.devlib.common;
+package com.baidu.unbiz.devlib.common.bo;
 
 import java.lang.reflect.Method;
 

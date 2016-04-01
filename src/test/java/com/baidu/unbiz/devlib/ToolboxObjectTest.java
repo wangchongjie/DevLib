@@ -2,16 +2,12 @@ package com.baidu.unbiz.devlib;
 
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 import org.junit.Test;
 import org.springframework.util.Assert;
 
-import com.baidu.unbiz.devlib.toolbox.collection.ToKvMapConverter;
-import com.baidu.unbiz.devlib.toolbox.collection.ToMapConverter;
-import com.baidu.unbiz.devlib.toolbox.collection.ToSetMapConverter;
-import com.baidu.unbiz.devlib.toolbox.object.IdCollector;
+import com.baidu.unbiz.devlib.collection.IdCollector;
 import com.baidu.unbiz.devlib.vo.ViewItem;
 
 public class ToolboxObjectTest {

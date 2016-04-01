@@ -1,4 +1,4 @@
-package com.baidu.unbiz.devlib.toolbox.time;
+package com.baidu.unbiz.devlib.time;
 
 public interface TimeAware {
 

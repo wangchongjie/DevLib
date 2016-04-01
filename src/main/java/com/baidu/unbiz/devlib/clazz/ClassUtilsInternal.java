@@ -1,4 +1,4 @@
-package com.baidu.unbiz.devlib.utils;
+package com.baidu.unbiz.devlib.clazz;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -14,7 +14,7 @@ import java.util.Set;
 
 import org.apache.commons.lang.ArrayUtils;
 
-import com.baidu.unbiz.devlib.common.MethodPair;
+import com.baidu.unbiz.devlib.common.bo.MethodPair;
 
 /**
  * Class相关工具类

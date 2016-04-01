@@ -1,4 +1,4 @@
-package com.baidu.unbiz.devlib.toolbox.object;
+package com.baidu.unbiz.devlib.collection;
 
 import java.lang.reflect.Field;
 import java.util.Collection;
@@ -11,7 +11,7 @@ import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import com.baidu.unbiz.devlib.common.GenericsAware;
+import com.baidu.unbiz.devlib.common.bo.GenericsAware;
 
 /**
  * 通用IDs收集器

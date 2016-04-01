@@ -1,4 +1,4 @@
-package com.baidu.unbiz.devlib.toolbox.time;
+package com.baidu.unbiz.devlib.time;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

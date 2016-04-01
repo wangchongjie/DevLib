@@ -1,4 +1,4 @@
-package com.baidu.unbiz.devlib.utils;
+package com.baidu.unbiz.devlib.crypto;
 
 import java.math.BigInteger;
 import java.util.Collection;
