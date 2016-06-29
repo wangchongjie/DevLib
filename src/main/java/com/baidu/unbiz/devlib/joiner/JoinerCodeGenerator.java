@@ -31,7 +31,7 @@ import com.baidu.unbiz.devlib.crypto.Fs64Utils;
  */
 public class JoinerCodeGenerator {
 
-    protected final static Logger LOG = AopLogFactory.getLogger(JoinerCodeGenerator.class);
+    protected static final Logger LOG = AopLogFactory.getLogger(JoinerCodeGenerator.class);
 
     /**
      * Joiner缓存

@@ -4,9 +4,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import javax.swing.SortOrder;
-
 /**
+ * Class类连接器
+ *
  * @author wangchongjie
  */
 public class Joiner {
@@ -55,7 +55,7 @@ public class Joiner {
     }
 
     public Joiner mergeKey(String mergeKey) {
-        if(this.mergeKeys == null) {
+        if (this.mergeKeys == null) {
             this.mergeKeys = new HashSet<String>();
         }
         mergeKeys.add(mergeKey);
@@ -63,7 +63,7 @@ public class Joiner {
     }
 
     public Joiner mergeVal(String mergeVal) {
-        if(this.mergeVals == null) {
+        if (this.mergeVals == null) {
             this.mergeVals = new HashSet<String>();
         }
         mergeVals.add(mergeVal);

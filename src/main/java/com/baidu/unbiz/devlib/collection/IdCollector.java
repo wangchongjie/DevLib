@@ -22,7 +22,7 @@ import com.baidu.unbiz.devlib.common.bo.GenericsAware;
  */
 public abstract class IdCollector<ITEM> extends GenericsAware<ITEM> {
 
-    private final static Log LOG = LogFactory.getLog(IdCollector.class);
+    private static final Log LOG = LogFactory.getLog(IdCollector.class);
 
     @SuppressWarnings("unchecked")
     public <ID> Set<ID> collectIds(Collection<ITEM> itemList, String fieldName) {

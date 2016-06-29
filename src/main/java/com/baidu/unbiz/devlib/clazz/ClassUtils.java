@@ -84,7 +84,7 @@ public class ClassUtils {
      * @param clazz class
      * @return Type[]
      */
-    public final static Type[] getGenericTypes(Class<?> clazz) {
+    public static final Type[] getGenericTypes(Class<?> clazz) {
         Type superClass = clazz.getGenericSuperclass();
         ParameterizedType type = (ParameterizedType) superClass;
         return type.getActualTypeArguments();
@@ -150,7 +150,7 @@ public class ClassUtils {
      * @param from
      * @param to
      */
-    public final static void copyProperties(Object from, Object to) {
+    public static final void copyProperties(Object from, Object to) {
 
         Set<Field> fromSet = getAllFiled(from.getClass());
         Set<Field> toSet = getAllFiled(to.getClass());
@@ -197,6 +197,7 @@ public class ClassUtils {
             try {
                 return clazz.getField(field);
             } catch (Exception ex) {
+                // do nothing
             }
         }
         return null;

@@ -32,6 +32,7 @@ public class ClassUtilsInternal {
                 return result;
             }
         } catch (Exception e) {
+            // do nothing
         }
         try {
             result = clazz.getField(field);
@@ -39,6 +40,7 @@ public class ClassUtilsInternal {
                 return result;
             }
         } catch (Exception ex) {
+            // do nothing
         }
         // 递归获取父类的所有字段
         Class<?> superClass = clazz.getSuperclass();
@@ -154,13 +156,17 @@ public class ClassUtilsInternal {
         for (Method m : methods) {
             boolean flag = Modifier.isPublic(m.getModifiers()) && !Modifier.isStatic(m.getModifiers());
             if (flag) {
-
                 String name = m.getName();
+                boolean isGetSetter = false;
                 if (name.startsWith("get") && m.getParameterTypes().length == 0) {
+                    isGetSetter = true;
                 } else if (name.startsWith("is") && m.getParameterTypes().length == 0) {
+                    isGetSetter = true;
                 } else if (name.startsWith("set") && m.getParameterTypes().length == 1) {
+                    isGetSetter = true;
                 } else if (name.equalsIgnoreCase("setUnixTime") // add by wangchongjie for OlapEngine
                         && m.getParameterTypes().length == 2) {
+                    isGetSetter = true;
                 } else {
                     continue;
                 }

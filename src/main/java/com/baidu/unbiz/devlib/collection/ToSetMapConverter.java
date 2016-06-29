@@ -19,7 +19,7 @@ import org.apache.commons.logging.LogFactory;
  */
 public abstract class ToSetMapConverter<ITEM, KEY, VALUE> {
 
-    private final static Log LOG = LogFactory.getLog(ToSetMapConverter.class);
+    private static final Log LOG = LogFactory.getLog(ToSetMapConverter.class);
 
     public Map<KEY, Set<VALUE>> convert(final List<ITEM> objs) {
         Map<KEY, Set<VALUE>> map = new HashMap<KEY, Set<VALUE>>();

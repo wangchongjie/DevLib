@@ -17,7 +17,7 @@ import org.apache.commons.logging.LogFactory;
  */
 public abstract class ToMapConverter<KEY, ITEM> {
 
-    private final static Log LOG = LogFactory.getLog(ToMapConverter.class);
+    private static final Log LOG = LogFactory.getLog(ToMapConverter.class);
 
     public Map<KEY, ITEM> convert(final List<ITEM> objs) {
         Map<KEY, ITEM> map = new HashMap<KEY, ITEM>();

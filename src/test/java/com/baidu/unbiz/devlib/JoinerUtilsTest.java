@@ -1,14 +1,9 @@
 package com.baidu.unbiz.devlib;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import javax.swing.SortOrder;
-
-import org.apache.commons.lang.builder.ToStringBuilder;
-import org.apache.commons.lang.builder.ToStringStyle;
 import org.junit.Test;
 import org.springframework.util.Assert;
 

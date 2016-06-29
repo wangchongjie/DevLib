@@ -17,7 +17,7 @@ import org.apache.commons.logging.LogFactory;
  */
 public abstract class ToKvMapConverter<ITEM, KEY, VALUE> {
 
-    private final static Log LOG = LogFactory.getLog(ToKvMapConverter.class);
+    private static final Log LOG = LogFactory.getLog(ToKvMapConverter.class);
 
     public Map<KEY, VALUE> convert(final List<ITEM> objs) {
         Map<KEY, VALUE> map = new HashMap<KEY, VALUE>();

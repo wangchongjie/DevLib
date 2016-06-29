@@ -82,7 +82,7 @@ public class AtomicComputeCache<K, V> {
             this.swapResultAndCleanComputeTask(key, result);
             return result;
         } else {
-            ComputableTask<K> task = new ComputableTask<K>((Callable<Object>)biz);
+            ComputableTask<K> task = new ComputableTask<K>((Callable<Object>) biz);
             ComputableTask<K> old = computingCache.putIfAbsent(key, task);
             if (old == null) { // success to put compute cache
                 if (computeResultCache.containsKey(key)) { // other thread already done

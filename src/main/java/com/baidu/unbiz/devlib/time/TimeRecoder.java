@@ -11,7 +11,7 @@ import org.apache.commons.logging.LogFactory;
  * @dateTime 2015-5-10 下午9:44:31
  */
 public class TimeRecoder {
-    private final static Log LOG = LogFactory.getLog(TimeRecoder.class);
+    private static final Log LOG = LogFactory.getLog(TimeRecoder.class);
 
     private long time;
     private String token = "";

@@ -16,7 +16,7 @@ public class ThreadLogContext {
     /**
      * 线程上下文变量的持有者
      */
-    private final static ThreadLocal<Map<String, Object>> CTX_HOLDER = new ThreadLocal<Map<String, Object>>();
+    private static final ThreadLocal<Map<String, Object>> CTX_HOLDER = new ThreadLocal<Map<String, Object>>();
 
     static {
         CTX_HOLDER.set(new HashMap<String, Object>());
@@ -25,12 +25,12 @@ public class ThreadLogContext {
     /**
      * 用来做分库分表的切分ID
      */
-    private final static String OLAP_SHARD_KEY = "olapShardKey";
+    private static final String OLAP_SHARD_KEY = "olapShardKey";
 
     /**
      * 线程的日志级别
      */
-    private final static String THREAD_LOG_KEY = "threadLog";
+    private static final String THREAD_LOG_KEY = "threadLog";
 
     /**
      * 添加内容到线程上下文中
@@ -38,7 +38,7 @@ public class ThreadLogContext {
      * @param key
      * @param value
      */
-    public final static void putContext(String key, Object value) {
+    public static final void putContext(String key, Object value) {
         Map<String, Object> ctx = CTX_HOLDER.get();
         if (ctx == null) {
             init();
@@ -53,7 +53,7 @@ public class ThreadLogContext {
      * @param key
      */
     @SuppressWarnings("unchecked")
-    public final static <T extends Object> T getContext(String key) {
+    public static final <T extends Object> T getContext(String key) {
         Map<String, Object> ctx = CTX_HOLDER.get();
         if (ctx == null) {
             return null;
@@ -63,10 +63,8 @@ public class ThreadLogContext {
 
     /**
      * 获取线程上下文
-     * 
-     * @param key
      */
-    public final static Map<String, Object> getContext() {
+    public static final Map<String, Object> getContext() {
         Map<String, Object> ctx = CTX_HOLDER.get();
         if (ctx == null) {
             return null;
@@ -79,7 +77,7 @@ public class ThreadLogContext {
      * 
      * @param key
      */
-    public final static void remove(String key) {
+    public static final void remove(String key) {
         Map<String, Object> ctx = CTX_HOLDER.get();
         if (ctx != null) {
             ctx.remove(key);
@@ -92,7 +90,7 @@ public class ThreadLogContext {
      * @param key
      * @return
      */
-    public final static boolean contains(String key) {
+    public static final boolean contains(String key) {
         Map<String, Object> ctx = CTX_HOLDER.get();
         if (ctx != null) {
             return ctx.containsKey(key);
@@ -103,14 +101,14 @@ public class ThreadLogContext {
     /**
      * 清空线程上下文
      */
-    public final static void clean() {
+    public static final void clean() {
         CTX_HOLDER.set(null);
     }
 
     /**
      * 初始化线程上下文
      */
-    public final static void init() {
+    public static final void init() {
         CTX_HOLDER.set(new HashMap<String, Object>());
     }
 
